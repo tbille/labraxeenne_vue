@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import i18n from './i18n'
 import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm'
 
 import 'bootstrap/dist/css/bootstrap.css'
@@ -16,5 +17,6 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  i18n
 })
