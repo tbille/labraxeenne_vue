@@ -39,17 +39,30 @@ export default {
 
 <style lang="scss"> 
 
+  @import '~bootstrap/scss/_variables.scss';
+  @import '~bootstrap/scss/_mixins.scss';
+
   .menu-toggle {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .navbar-toggler{
+      align-self: center;
+    }
   }
 
   .menu {
-    @include media-breakpoint-up(map-get($grid-breakpoints,md)){
-      display:flex;
+    display: flex;
+
+    @include media-breakpoint-down(xs,$grid-breakpoints){
+      flex-direction: column;
     }
-    
+
+    @include media-breakpoint-up(xs,$grid-breakpoints){
+      justify-content: center;
+      flex-direction: row;
+    }
   }
 
   .navbar {
