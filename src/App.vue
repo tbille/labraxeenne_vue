@@ -42,14 +42,12 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  height: 300px;
   background-color: #f5f5f5;
 }
 
 .container {
   width: auto;
-  max-width: 680px;
   padding: 0 15px;
 }
 </style>
