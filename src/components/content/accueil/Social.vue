@@ -1,8 +1,9 @@
 <template>
     <div class="social">
-        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+    
     </div>
 </template>
 
@@ -19,7 +20,11 @@
     i {
         margin: 4px;
         font-size: 4em;
-        color: rgba(178, 1, 1, 0.80);
+        color: rgba(178, 1, 1, 0.6);
+    }
+
+    i:hover {
+        color: rgba(178, 1, 1, 0.8);
     }
     
   }

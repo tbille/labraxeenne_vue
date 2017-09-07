@@ -5,10 +5,12 @@ import App from './App'
 import router from './router'
 import i18n from './i18n'
 import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm'
+import 'bootstrap'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'font-awesome/scss/font-awesome.scss'
+import './assets/font.css'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)

@@ -1,26 +1,24 @@
 <template>
   <div class="accueil">
-    <div class="brand hidden-md-down">
-      <Brand></Brand>
+    <div class="container-fluid top">
+      <div class="row">
+        <Brand></Brand>
+      </div>
     </div>
     <div class="container-fluid">
-      <div class="row accueil-menu">
-        <AccueilMenu></AccueilMenu>
+      <div class="row justify-content-lg-center social">
+        <div class="col-lg-10">
+          <Social>
+          </Social>
+        </div>
       </div>
-      <hr/>
-      <div class="row presentation">
-        <div class="container col-md-4">
+      <div class="row justify-content-lg-center presentation" align="center">
+        <div class=" col-lg-5">
           <Presentation>
           </Presentation>
         </div>
-        <div class="container col-md-4">
-          <BiereMoment>
-          </BiereMoment>
-        </div>
-        <div class="container col-md-4">
-          <Social>
-          </Social>
-          <Twitter>
+        <div class="col-lg-5">
+          <Twitter class="twitter">
           </Twitter>
         </div>
       </div>
@@ -34,7 +32,6 @@ import Twitter from './../../Twitter'
 import Brand from './Brand'
 import BiereMoment from './BiereMoment'
 import Presentation from './Presentation'
-import AccueilMenu from './AccueilMenu'
 import Social from './Social'
 
 export default {
@@ -44,22 +41,19 @@ export default {
     Brand,
     BiereMoment,
     Presentation,
-    AccueilMenu,
     Social
   },
   data () {
     return {
-      slide: 0,
-      sliding: null
     }
   },
+  mounted () {
+  },
+  destroy () {
+  },
+  watch: {
+  },
   methods: {
-    onSlide (slide) {
-      this.sliding = true
-    },
-    onSlid (slide) {
-      this.sliding = false
-    }
   }
 }
 </script>
@@ -68,23 +62,37 @@ export default {
 
   .accueil {
     position: relative;
-    background-image: url("~@/assets/header.jpg");
+    //background:  url("~@/assets/header.jpg") no-repeat top;
+    // linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, #F5F5F5 600px),
+    // background-image: url("~@/assets/header.jpg") no-repeat top, linear-gradient(transparent, #d13531);
+    // background-image: url("~@/assets/header.jpg"), linear-gradient(red, yellow);
+    // background: url("~@/assets/header.jpg"), linear-gradient(#004092, #020202, transparent) bottom; 
+// background-size: cover; 
+    //background-image: url("http://www.transparenttextures.com/patterns/beige-paper.png");
+    //background-color: #ffffcc;
+    background-size: 100% auto;
+    background-image: url("~@/assets/houblons-brand.png");
+    background-position: center top;
+    background-size: auto 700px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
-    hr {
-      margin-top: 10px;
-      margin-bottom: 40px; 
-      width: 40%;
-      border-top: 2px solid rgba(255, 255, 255, 0.2);
+    .presentation {
+      flex-wrap: wrap-reverse;
+      .container {
+        margin-top: 1em;
+        width: 100%;
+      }
     }
 
-    .brand {
-      display: flex;
-      justify-content: center;
-      height: 300px;
+    .top {
+      margin-bottom: 20px;
+
     }
 
-    .accueil-menu {
-      margin-top: 10px;
+    .twitter {
+      margin: 0 0 30px 0;
     }
+
   }
 </style>

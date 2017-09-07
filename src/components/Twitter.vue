@@ -2,7 +2,7 @@
   <div class="twitter card">
     <a class="twitter-timeline"
       href="https://twitter.com/labraxeenne"
-      data-tweet-limit="1"
+      data-tweet-limit="3"
       data-chrome="nofooter noborders noscrollbar noheader">
     Tweets by @labraxeenne
     </a>
@@ -29,14 +29,9 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
-
-    .card-block {
-      align-self: flex-end;
-      .btn {
-        
-      }
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    padding: 20px;
+    .card { 
     }
-    
   }
 </style>
